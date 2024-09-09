@@ -1,0 +1,166 @@
+html, body {
+  overflow: auto; /* Allow scrolling */
+}
+
+/* For WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* For Firefox */
+html, body {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  background-color: orangered;
+  position: relative; /* Ensure it’s positioned correctly */
+  z-index: 10; /* Ensure it's on top of other content */
+
+overflow: hidden;
+}
+
+
+.menu-icon {
+  
+  z-index: 11; /* Ensure menu icon is above other elements */
+  cursor: pointer;
+  display: none; /* Hide menu icon by default */
+} 
+
+ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 2px;
+  gap: 13px;
+  margin: 0;
+  display: flex;
+  color: white;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 11px;
+
+}
+
+li:hover{
+  transform: scale(1.1);
+}
+
+li {
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+a, NavLink {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Responsive styles for small screen */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    height: 13.5px;
+    align-items: center;
+   
+  }
+
+  /* Show navigation items when the menu is open */
+  .open ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Optionally, center-align the links when the menu is open */
+  .open li {
+    margin: 0.2rem 0;
+    text-align: center;
+   
+  }
+  .home-icon{
+    display: none;
+  }
+}
+/*For big screen*/
+@media (min-width: 768px){
+  .home-icon{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    padding-right: 18px;
+  }
+  nav{
+    height: 13.5px;
+  }
+} 
+
+
+/* Social Media Icons */
+.social-icons {
+  position: fixed;
+  bottom: 20px; /* Adjust this value to move the icons up or down */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 10; 
+}
+
+.social-icons img {
+  width: 34px;
+  height: 34px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Example to change color */
+  transition: transform 0.3s ease;
+}
+
+/* Hover zoom effect for social icons */
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.social-icons-1{
+  position: fixed;
+  bottom: 27px; /* Adjust this value to move the icons up or down */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 10; 
+}
+
+.social-icons-1 img{
+  width: 20px;
+  height: 19px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Example to change color */
+  transition: transform 0.3s ease;
+}
+
+
+.git-image:hover{
+  transform: scale(1.1);
+}

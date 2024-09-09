@@ -1,0 +1,183 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image1 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensure the image covers the entire container without distortion */
+  position: fixed; /* Position the image behind the text overlay */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust text color as needed */
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: rounded corners */
+  z-index: 1;
+}
+.bio-hello {
+  font-size: 11px;
+}
+
+.bio-name {
+  font-size: xx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.highlighted {
+  color: orangered; /* Change this to the desired color */
+}
+
+.bio-description {
+  font-size: 14px;
+  font-family: cursive;
+}
+
+.download-cv-button {
+  margin-top: 50px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 15px orangered; /* Initial soft glow */
+}
+
+.download-cv-button:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.text-overlay-bottom {
+  position: absolute;
+  top: 100%;
+  color: white; /* Adjust text color as needed */
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: rounded corners */
+  z-index: 1;
+}
+.introduce{
+  color: orangered;
+}
+
+.about-me-heading {
+  font-size: 48px;
+  padding-left: 122px;
+  padding-bottom: 20px;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+}
+
+.outer-container{
+  display: flex;
+}
+
+.left-box{
+  width: 450%;
+}
+
+.right-box{
+  width: 300%;
+  color: white;
+
+}
+
+.about-me-p {
+  font-size: 17px;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  padding-left: 55px;
+}
+.about-me-lines {
+  padding-top: 35px;
+  background-color: none;
+}
+
+.my-img {
+  width: 40%; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Optional: makes the image circular */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
+  transition: box-shadow 0.3s ease-in-out;
+  margin-top: 32px;
+  margin-left: 34.5%;
+  
+}
+
+.lowest-bottom {
+  font-size: 30px;
+  padding-left: 218px;
+ 
+}
+
+
+.space{
+padding-top: 70px;
+}
+
+/* for small */
+@media (max-width : 768px) {
+  
+
+  .right-box{
+    display: none;
+    
+  }
+  .left-box{
+    background-color: none;
+    padding-right: 20px;
+  }
+
+  .my-img-bottom {
+  width: 40%; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Optional: makes the image circular */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
+  transition: box-shadow 0.3s ease-in-out;
+  margin-top: 25px;
+  margin-left: 31%;
+  
+  
+}
+.myself{
+  padding-left: 105px;
+}
+}
+
+@media (min-width : 768px) {
+  
+
+  .right-box{
+    width: 300%;
+  color: white;
+  }
+
+  .my-img-bottom {
+  width: 40%; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Optional: makes the image circular */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
+  transition: box-shadow 0.3s ease-in-out;
+  margin-top: 25px;
+  margin-left: 34.5%;
+  display: none;
+}
+}
