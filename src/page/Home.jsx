@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import pdfFile from "./projectself.pdf";
+import pdfFile from "./pranjal-sachan-resume.pdf";
 import catImage from "./cat.jpg";
 import profileImage from "./pranjal.png";
 
@@ -66,7 +66,7 @@ const Home = () => {
               <img src={profileImage} alt="" className="my-img"></img>
             </div>
           </div>
-          <div className="space"></div>
+         
         </div>
 
         <div className="text-overlay">
