@@ -72,6 +72,7 @@
 }
 .introduce{
   color: orangered;
+ 
 }
 
 .about-me-heading {
@@ -127,11 +128,22 @@
   padding-left: 218px;
  
 }
-
-
 .space{
 padding-top: 70px;
 }
+.about-me-heading {
+ 
+  font-size: 2rem; /* Default font size for full screen */
+}
+
+.highlight-text {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-shadow: 0 0 15px orangered; /* Initial soft glow */
+color: orangered;
+font-weight: bold;
+
+}
+
 
 /* for small */
 @media (max-width : 768px) {
@@ -154,12 +166,37 @@ padding-top: 70px;
   transition: box-shadow 0.3s ease-in-out;
   margin-top: 25px;
   margin-left: 31%;
+
+  }
   
+  .about-me-heading {
+    text-align: center;
+    padding-right:100px;
+  }
+  /* Break into two lines */
+  .let-me, .introduce {
+    display: inline;
+  }
+  .myself {
+    display: block; /* Move "Myself" to a new line */
+ 
+    font-size: 2rem;
+  }
+
+  .about-me-p {
+    font-size: 1rem;
+  
+  }
   
 }
-.myself{
-  padding-left: 105px;
-}
+
+
+@media (max-width: 480px) {
+  .about-me-heading {
+    font-size: 1.2rem; /* Further reduce for mobile screens */
+  }
+
+
 }
 
 @media (min-width : 768px) {
@@ -179,5 +216,10 @@ padding-top: 70px;
   margin-top: 25px;
   margin-left: 34.5%;
   display: none;
+}
+
+
+.about-me-heading{
+  padding-right: 260px;
 }
 }
