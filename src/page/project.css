@@ -106,10 +106,24 @@ p {
   .left-container, .right-container {
     flex: 1 1 100%; /* Full width on smaller screens */
   }
+  .container-text{
+    text-align: center;
+  }
+
+  .right-container {
+margin-bottom: 45px;
+  }
+  .left-container{
+    margin-bottom: -75px;
+  }
+
 }
 
 @media (max-width:480px){
   .full-project-button{
     margin-left: 31%;
+  }
+  .container-text{
+    text-align: center;
   }
 }
