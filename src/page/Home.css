@@ -175,6 +175,7 @@ font-weight: bold;
   }
   /* Break into two lines */
   .let-me, .introduce {
+      font-size: 2rem;
     display: inline;
   }
   .myself {
