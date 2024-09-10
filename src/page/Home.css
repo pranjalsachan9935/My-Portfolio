@@ -41,7 +41,7 @@
 
 .bio-description {
   font-size: 14px;
-  font-family: cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .download-cv-button {
@@ -168,27 +168,38 @@ font-weight: bold;
   margin-left: 31%;
 
   }
-  
   .about-me-heading {
     text-align: center;
     padding-right:100px;
   }
   /* Break into two lines */
   .let-me, .introduce {
-      font-size: 2rem;
-    display: inline;
+    display: block;
+    font-size: 2rem;
+   
   }
+  .introduce {
+    background-color: rgb(255, 255, 255);
+  }
+  
   .myself {
     display: block; /* Move "Myself" to a new line */
  
     font-size: 2rem;
+ 
   }
 
   .about-me-p {
     font-size: 1rem;
   
   }
-  
+
+.highlighted {
+  color: orangered; 
+  display: block;
+  background-color: #ffffff;
+}
+
 }
 
 
