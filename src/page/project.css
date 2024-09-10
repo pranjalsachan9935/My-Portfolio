@@ -107,3 +107,9 @@ p {
     flex: 1 1 100%; /* Full width on smaller screens */
   }
 }
+
+@media (max-width:480px){
+  .full-project-button{
+    margin-left: 31%;
+  }
+}
