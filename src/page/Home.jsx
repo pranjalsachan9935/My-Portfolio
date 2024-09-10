@@ -27,7 +27,8 @@ const Home = () => {
 
         <div className="text-overlay-bottom">
           <h1 className="about-me-heading">
-            Let Me <span className="introduce">Introduce</span>{" "}
+            <span className="let-me">Let Me </span>
+            <span className="introduce">Introduce </span>
             <span className="myself">Myself</span>
           </h1>
 
@@ -35,23 +36,26 @@ const Home = () => {
             <div className="left-box">
               <p className="about-me-p">
                 <div>
-                  I discovered my passion for programming and continue to grow
+                  I discovered my passion for <span className="highlight-text">programming </span>and continue to grow
                   with each new challenge.
                 </div>
                 <div className="about-me-lines">
-                  I'm proficient in modern technologies like JavaScript,
-                  React.js, and Next.js, while also having a solid foundation in
+                  I'm proficient in modern technologies like 
+                  <span className="highlight-text">JavaScript,
+                  React.js and Next.js</span>
+                  
+                   while also having a solid foundation in
                   C++ and Go.
                 </div>
                 <div className="about-me-lines">
-                  My primary interests lie in crafting dynamic, user-friendly
+                  My primary interests lie in crafting <span className="highlight-text">dynamic, user-friendly </span>
                   web applications, exploring new frontend technologies, and
                   diving into blockchain development.
                 </div>
                 <div className="about-me-lines">
-                  I love to push the boundaries of web development by creating
+                  I love to push the boundaries of <span className="highlight-text">web development </span>creating
                   cutting-edge products using modern frameworks like React.js
-                  and Next.js, and integrating with Node.js for full-stack
+                  and Next.js, and integrating with <span className="highlight-text">Node.js</span> for full-stack
                   projects.
                 </div>
               </p>
