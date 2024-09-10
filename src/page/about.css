@@ -55,3 +55,16 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
 }
+
+
+@media (max-width:480px){
+  .image {
+    width: 90%; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: makes the image circular */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
+    transition: box-shadow 0.3s ease-in-out;
+    
+  }
+  
+}
