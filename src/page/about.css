@@ -66,5 +66,22 @@
     transition: box-shadow 0.3s ease-in-out;
     
   }
+  .left-section {
+    width: 78%;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    
+  }
+  .right-section {
+    width: 93%;
+    padding: 20px;
+    background-color: black; /* Ensure background color is consistent */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+  }
   
 }
