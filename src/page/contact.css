@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh; /* Full viewport height minus navbar height */
+  height: 100vh;  /* Full viewport height minus navbar height */
   width: 100vw; /* Full viewport width */
-  background-color: black;
+  background-color: rgb(0, 0, 0);
  
 }
 
@@ -15,6 +15,7 @@
   display: flex;
   color: rgb(255, 255, 255);
   justify-content: center;
+  margin-top: 50px;
   
   
 }
@@ -67,12 +68,13 @@ input[type="submit"]:hover {
 }
 
 
-/* media css start */
+
 
 
 
 /* for small */
 @media (max-width:480px){
+
 
   .container{
     width: 76%;
