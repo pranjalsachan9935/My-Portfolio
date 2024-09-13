@@ -20,8 +20,10 @@ nav {
   background-color: orangered;
   position: relative; /* Ensure it’s positioned correctly */
   z-index: 10; /* Ensure it's on top of other content */
-
+position: fixed;
 overflow: hidden;
+width: 100%;
+box-shadow: 0 0 15px orangered; 
 }
 
 
