@@ -106,15 +106,19 @@ p {
   .left-container, .right-container {
     flex: 1 1 100%; /* Full width on smaller screens */
   }
-  .container-text{
-    text-align: center;
-  }
-
+  
   .right-container {
 margin-bottom: 45px;
   }
   .left-container{
     margin-bottom: -75px;
+  }
+  .project-image {
+    height: 40%;
+   
+  }
+  .full-project-button{
+    margin-left: 35%;
   }
 
 }
@@ -123,7 +127,7 @@ margin-bottom: 45px;
   .full-project-button{
     margin-left: 31%;
   }
-  .container-text{
-    text-align: center;
-  }
+ 
+ 
+
 }
