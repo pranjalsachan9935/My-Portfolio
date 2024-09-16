@@ -1,4 +1,4 @@
-import React, { useState, Suspense, useEffect, useRef } from "react";
+import React, { useState, Suspense, useRef } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -29,98 +29,96 @@ const App = () => {
   };
 
   // Close the menu if clicking outside of the menu or menu icon
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        menuRef.current &&
-        menuIconRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !menuIconRef.current.contains(event.target)
-      ) {
-        setMenuOpen(false); // Close the menu
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
+  const handleClickOutside = (event) => {
+    if (
+      menuRef.current &&//for nav bar
+      menuIconRef.current &&//for icon 
+      !menuRef.current.contains(event.target) && // If clicked outside the menu
+      !menuIconRef.current.contains(event.target) // And outside the menu icon
+    ) {
+      setMenuOpen(false); // Close the menu
+    }
+  };
 
   return (
-    <Router>
-      <nav className={`navbar ${menuOpen ? "open" : ""}`} ref={menuRef}>
+    <div onClick={handleClickOutside} style={{ minHeight: "100vh" }}>
+      <Router>
+        <nav style={{padding:0}} className={`navbar ${menuOpen ? "open" : ""}`} ref={menuRef}>
 
-        <div ref={menuIconRef} className="menu-icon" onClick={toggleMenu}>
-          <img src={menuIcon} alt="Menu Icon" />
+          {/* Menu Icon */}
+          <div ref={menuIconRef} className="menu-icon" onClick={toggleMenu}>
+            <img src={menuIcon} alt="Menu Icon" />
+          </div>
+
+          {/* Home Icon */}
+          <Link to="/">
+            <img src={homeIcon} alt="homeIcon" className="home-icon"></img>
+          </Link>
+
+          {/* Navigation Links */}
+          <ul>
+            <li>
+              <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+                HOME
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/Aboutus" onClick={() => setMenuOpen(false)}>
+                ABOUT
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/Myproject" onClick={() => setMenuOpen(false)}>
+                PROJECT
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/Contactus" onClick={() => setMenuOpen(false)}>
+                CONTACT
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Social Media Icons */}
+        <div className="social-icons">
+          <a
+            href="https://www.instagram.com/pranjal_sachan2021"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={instagramLogo} alt="Instagram Logo" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pranjal-sachan-a09549251"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedinLogo} alt="LinkedIn Logo" />
+          </a>
         </div>
 
-       <Link to="/">
-       <img src={homeIcon} alt="homeIcon" className="home-icon"></img>
-       </Link>
-          
-        
-        
-        <ul>
-          <li>
-            <NavLink to="/" end onClick={() => setMenuOpen(false)}>
-              HOME
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Aboutus" onClick={() => setMenuOpen(false)}>
-              ABOUT
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Myproject" onClick={() => setMenuOpen(false)}>
-              PROJECT
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Contactus" onClick={() => setMenuOpen(false)}>
-              CONTACT
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+        <div className="social-icons-1">
+          <a
+            href="https://github.com/pranjalsachan9935"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={githubLogo} alt="GitHub Logo" className="git-image" />
+          </a>
+        </div>
 
-      {/* Social Media Icons */}
-      <div className="social-icons">
-        <a
-          href="https://www.instagram.com/pranjal_sachan2021"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={instagramLogo} alt="Instagram Logo" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/pranjal-sachan-a09549251"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={linkedinLogo} alt="LinkedIn Logo" />
-        </a>
-      </div>
-      <div className="social-icons-1">
-        <a
-          href="https://github.com/pranjalsachan9935"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={githubLogo} alt="GitHub Logo" className="git-image" />
-        </a>
-      </div>
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Aboutus" element={<About />} />
-          <Route path="/Contactus" element={<Contact />} />
-          <Route path="/Myproject" element={<Project />} />
-        </Routes>
-      </Suspense>
-    </Router>
+        {/* Routes */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Aboutus" element={<About />} />
+            <Route path="/Contactus" element={<Contact />} />
+            <Route path="/Myproject" element={<Project />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </div>
   );
 };
 
