@@ -97,16 +97,11 @@
   color: white;
 }
 
-.about-me-p {
-  font-size: 17px;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
-}
+
 .about-me-lines {
   padding-top: 35px;
   background-color: none;
+  font-size: 0.9rem;
 }
 
 .my-img {
@@ -145,8 +140,8 @@
   .left-box {
     background-color: none;
     margin-bottom: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .my-img-bottom {
@@ -167,7 +162,7 @@
       NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
       EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
       "Helvetica Neue", "Noto Sans", sans-serif;
-    text-align: center;
+   
   }
 
   /* Break into two lines */
@@ -183,7 +178,7 @@
   }
 
   .about-me-p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .about-me-heading {
     font-size: 2rem;
@@ -202,6 +197,20 @@
   .about-me-heading {
     font-size: 1.2rem;
     padding-left: 34%;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  .text-overlay-bottom{
+    top: 70%;
   }
 }
 
@@ -226,7 +235,7 @@
     padding-right: 260px;
   }
   .about-me-p {
-    font-size: 17px;
+    font-size: 0.8rem;
     font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
       NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
       EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
@@ -234,4 +243,5 @@
     padding-left: 45px;
     margin-bottom: 100px;
   }
+ 
 }
