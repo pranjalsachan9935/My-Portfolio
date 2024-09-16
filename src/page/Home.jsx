@@ -35,7 +35,7 @@ const Home = () => {
           <div className="outer-container">
             <div className="left-box">
               <p className="about-me-p">
-                <div>
+                <div className="about-me-lines">
                   I discovered my passion for <span className="highlight-text">programming </span>and continue to grow
                   with each new challenge.
                 </div>
