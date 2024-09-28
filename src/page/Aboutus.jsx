@@ -11,7 +11,7 @@ function About() {
   return (
     <div className='outer-container'>
       <div className='left-section'>
-      <img src={profileImage} alt="Pranjal Sachan" className="image" /> 
+      <img src={profileImage} alt="Pranjal Sachan" className="profile-image" /> 
       </div>
       
       <div className='right-section'>
