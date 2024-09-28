@@ -3,6 +3,7 @@ import "./Home.css";
 import pdfFile from "./pranjal-sachan-resume.pdf";
 import catImage from "./cat.jpg";
 import profileImage from "./pranjal.png";
+import useScrolltotop from "../hooks/scrolltotop";
 
 const Home = () => {
   const downloadPDF = () => {
@@ -19,6 +20,8 @@ const Home = () => {
 
     document.body.removeChild(link); //This line removes the link element from the document after it has been clicked and the download has been triggered.
   };
+
+  useScrolltotop();
 
   return (
     <>
@@ -63,7 +66,7 @@ const Home = () => {
             </div>
 
             <div className="right-box">
-              <img src={profileImage} alt="" className="my-img"></img>
+              <img src={profileImage} alt="" className="my-img-top"></img>
             </div>
           </div>
          
