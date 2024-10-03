@@ -3,7 +3,8 @@ import "./Home.css";
 import pdfFile from "./pranjal-sachan-resume.pdf";
 import catImage from "./cat.jpg";
 import profileImage from "./pranjal.png";
-
+import useScrolltotop from "../hooks/scrolltotop";
+import Modal from "../Modal/modal";
 
 const Home = () => {
   const downloadPDF = () => {
@@ -20,8 +21,8 @@ const Home = () => {
 
     document.body.removeChild(link); //This line removes the link element from the document after it has been clicked and the download has been triggered.
   };
-
-
+ 
+  useScrolltotop();
 
   return (
     <>
@@ -31,7 +32,18 @@ const Home = () => {
         <div className="text-overlay-bottom">
           <h1 className="about-me-heading">
             <span className="let-me">Let Me </span>
-            <span className="introduce">Introduce </span>
+            <span className="introduce">
+  <span>I</span>
+  <span>n</span>
+  <span>t</span>
+  <span>r</span>
+  <span>o</span>
+  <span>d</span>
+  <span>u</span>
+  <span>c</span>
+  <span>e</span>
+</span>
+
             <span className="myself">Myself</span>
           </h1>
 
@@ -75,7 +87,15 @@ const Home = () => {
         <div className="text-overlay">
           <p className="bio-hello">____ HELLO</p>
           <h1 className="bio-name">
-            I'm <span className="highlighted">Pranjal</span> Sachan
+            I'm <span class="highlighted">
+  <span>P</span>
+  <span>r</span>
+  <span>a</span>
+  <span>n</span>
+  <span>j</span>
+  <span>a</span>
+  <span>l</span>
+</span> Sachan
           </h1>
           <p className="bio-description">
             This is Pranjal Sachan web developer, Designer and Coder located in
@@ -86,6 +106,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <Modal/>
     </>
   );
 };
