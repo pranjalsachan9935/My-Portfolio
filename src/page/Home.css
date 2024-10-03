@@ -35,28 +35,48 @@
   font-size: xx-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .highlighted {
-  color: orangered; /* Change this to the desired color */
+  font-size: xx-large;
+  color: #fff;
+  letter-spacing: 0.05em; /* Optional: adds slight spacing between letters */
 }
+
+.highlighted span {
+  text-shadow: 0 0 27px  #b721ff;
+
+  color: #b721ff;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom */
+}
+
+.highlighted span:hover {
+  transform: scale(1.5); /* Zoom up individual letters */
+}
+
 
 .bio-description {
   font-size: 14px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+  NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+  EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", sans-serif;
 }
 
 .download-cv-button {
   margin-top: 50px;
   font-size: 11px;
   font-weight: bold;
+  
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: orangered;
+ background: #000;
   color: white;
-  border: none;
+
   padding: 10px 30px;
   cursor: pointer;
+  border: 1px solid blueviolet;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 0 15px orangered; /* Initial soft glow */
+  box-shadow: 0 0 5px rgb(153, 0, 255); /* Initial soft glow */
 }
 
 .download-cv-button:hover {
@@ -67,8 +87,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
-
- 
 }
 
 
@@ -79,9 +97,25 @@
   border-radius: 5px; /* Optional: rounded corners */
   z-index: 1;
 }
+
 .introduce {
-  color: orangered;
+  font-size: xx-large;
+  color: #fff;
+  letter-spacing: 0.05em; /* Optional: adds slight spacing between letters */
 }
+
+.introduce span {
+  text-shadow: 0 0 27px  #b721ff;
+  color: #b721ff;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom */
+}
+
+.introduce span:hover {
+  transform: scale(1.5); /* Zoom up individual letters */
+}
+
+
 
 .about-me-heading {
   font-size: 48px;
@@ -135,9 +169,10 @@
 }
 
 .highlight-text {
+  text-shadow: 0 0 27px  #b721ff;
+ color: #b721ff;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  text-shadow: 0 0 15px orangered; /* Initial soft glow */
-  color: orangered;
+
   font-weight: bold;
 }
 
@@ -198,8 +233,9 @@
   }
 
   .highlighted {
+    text-shadow: 0 0 27px  #b721ff;
     display: block;
-    color: orangered; /* Change this to the desired color */
+    color: #b721ff; /* Change this to the desired color */
   }
 }
 
