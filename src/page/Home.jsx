@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import pdfFile from "./pranjal-sachan-resume.pdf";
-import catImage from "./cat.jpg";
+import catImage from "../assets/finalbgs.webp";
 import profileImage from "./pranjal.png";
 import useScrolltotop from "../hooks/scrolltotop";
 import Modal from "../Modal/modal";
