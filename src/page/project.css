@@ -36,9 +36,8 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(219, 219, 219, 0.25) 0px 50px 100px -20px,
-    rgba(183, 183, 183, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 5px 0px, rgba(255, 255, 255, 0.1) 0px 0px 1px 0px;
+ 
 }
 
 /* Project Title */
@@ -65,8 +64,7 @@
   margin-bottom: 20px;
   border-radius: 10px;
   margin-left: 9px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
-    0 0 40px rgba(255, 255, 255, 0.1); /* Soft glow effect */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for glow effect */
 }
 .project-image:hover {
@@ -89,7 +87,6 @@
   display: flex;
   gap: 0.5rem;
   border: none;
-
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 100px;
   font-weight: 800;
@@ -127,9 +124,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-      rgba(219, 219, 219, 0.25) 0px 50px 100px -20px,
-      rgba(183, 183, 183, 0.3) 0px 30px 60px -30px;
+    
   }
   .projects-section {
     background-color: #000;
