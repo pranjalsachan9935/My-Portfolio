@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./contact.css";
 import axios from "axios";
-import blueImage from '../assets/movie-image-1.webp';
+import blueImage from '../assets/fox.jpg';
 
 function Contact() {
   const inputref = useRef(null);
