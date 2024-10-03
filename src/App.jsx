@@ -9,8 +9,12 @@ import instagramLogo from "./assets/instagram.png";
 import linkedinLogo from "./assets/linkdin.png";
 import githubLogo from "./assets/github.png";
 import menuIcon from "./assets/menu.png";
-import homeIcon from './assets/home.png';
+import homeIcon from './assets/3d-house.png';
+import contactUsPng from './assets/information-channels.png';
+import aboutUsPng from './assets/about.png';
+import projectPng from './assets/rocket.png';
 import "./App.css";
+
 
 // Lazy loading pages
 const Home = React.lazy(() => import("./page/Home"));
@@ -50,31 +54,28 @@ const App = () => {
             <img src={menuIcon} alt="Menu Icon" />
           </div>
 
-          {/* Home Icon */}
-          <Link to="/">
-            <img src={homeIcon} alt="homeIcon" className="home-icon"></img>
-          </Link>
+         
 
           {/* Navigation Links */}
           <ul>
             <li>
-              <NavLink to="/" end onClick={() => setMenuOpen(false)}>
-                HOME
+              <NavLink to="/" end  onClick={() => setMenuOpen(false)}>
+              <img src={homeIcon} alt="homeIcon" className="nav-icon"></img> HOME
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Aboutus" onClick={() => setMenuOpen(false)}>
-                ABOUT
+              <NavLink to="/Aboutus" className={({isActive})=>(isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>
+              <img src={aboutUsPng} alt="About Us" className="nav-icon" /> ABOUT
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Myproject" onClick={() => setMenuOpen(false)}>
-                PROJECT
+              <NavLink to="/Myproject" className={({isActive})=>(isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>
+              <img src={projectPng} alt="Projects" className="nav-icon" /> PROJECT
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Contactus" onClick={() => setMenuOpen(false)}>
-                CONTACT
+              <NavLink to="/Contactus"  className={({isActive})=>(isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>
+              <img src={contactUsPng} alt="Contact Us" className="nav-icon" /> CONTACT
               </NavLink>
             </li>
           </ul>
@@ -118,8 +119,10 @@ const App = () => {
           </Routes>
         </Suspense>
       </Router>
+    
     </div>
   );
 };
 
 export default App;
+
