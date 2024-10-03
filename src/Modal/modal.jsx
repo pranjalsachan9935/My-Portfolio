@@ -7,8 +7,8 @@ const Modal = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Check if the user has already seen the modal
-    const hasSeenModal = localStorage.getItem('hasSeenModal');
+    // Check if the modal has been shown during this session
+    const hasSeenModal = sessionStorage.getItem('hasSeenModal');
 
     if (!hasSeenModal) {
       const timer = setTimeout(() => {
@@ -25,8 +25,8 @@ const Modal = () => {
     setOpen(false); 
     setTimeout(() => {
       setShow(false);
-      // Save a flag in localStorage to prevent showing the modal again
-      localStorage.setItem('hasSeenModal', true);
+      // Save a flag in sessionStorage to prevent showing the modal again during this session
+      sessionStorage.setItem('hasSeenModal', true);
     }, 500);
   };
 
