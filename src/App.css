@@ -3,15 +3,19 @@ body {
   overflow: auto; /* Allow scrolling */
 }
 
-/* For WebKit Browsers (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
-  display: none; /* Hide the scrollbar */
+.nav-icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
-/* For Firefox */
-html,
-body {
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+.home-icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-left: 20px;
 }
 
 nav {
@@ -19,17 +23,18 @@ nav {
   align-items: center;
   padding: 0.7rem 2rem;
   background-color: orangered;
-  position: relative; /* Ensure it’s positioned correctly */
+  position: fixed; /* Keep the navbar fixed */
   z-index: 10; /* Ensure it's on top of other content */
-  position: fixed;
-  overflow: hidden;
   width: 100%;
-  box-shadow: 0 0 15px orangered;
  
+  background: transparent;
+  backdrop-filter: blur(10px);
+ 
+  
 }
+
 .navbar-open {
   padding: 0;
-  
 }
 
 .menu-icon {
@@ -42,6 +47,7 @@ ul {
   list-style: none;
   padding: 0;
   padding-top: 12.5px;
+  padding-left: 25px;
   gap: 13px;
   margin: 0;
   display: flex;
@@ -54,13 +60,29 @@ ul {
   margin-bottom: 11px;
 }
 
-li:hover {
-  transform: scale(1.1);
+.navbar li {
+  margin-right: 50px; /* Space between items */
+  position: relative; /* For pseudo-element positioning */
 }
 
-li {
-  margin-right: 1rem;
-  transition: transform 0.3s ease;
+.navbar a {
+  text-decoration: none;
+  color: #fff; /* Adjust to your desired color */
+  padding: 5px 0; /* Add padding for the underline */
+  display: flex; /* Ensure icons and text align properly */
+  transition: transform 0.3s ease; 
+  align-items: center; /* Center align text and icon */
+}
+
+.navbar a:hover{
+  transform: scale(1.1); /* Slightly enlarge the icon */
+  transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+.navbar a .nav-icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; /* Space between icon and text */
 }
 
 a,
@@ -79,52 +101,65 @@ img {
 /* Responsive styles for small screen */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center nav items */
+    padding: 10px 0; /* Add some padding for spacing */
+   
+  }
+
+  nav a {
+    display: flex;
+    align-items: center; /* Align icon and text */
+    justify-content: flex-start; /* Left-align the content inside the link */
+    width: 100%; /* Take full width */
+    padding: 10px; /* Add padding around items */
+    text-align: left; /* Left-align the text */
+  }
+
+  /* Position the logo to the left */
+  nav a .nav-icon {
+    margin-right: 10px; /* Space between icon and text */
   }
 
   ul {
-    display: none;
+    display: none; /* Hide the unordered list by default */
   }
 
   .menu-icon {
-    display: flex;
-    height: 13.5px;
-    align-items: center;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 9px;
+    display: flex; /* Show menu icon when in mobile view */
+    flex-direction: column; /* Stack items vertically */
+    height: 13.5px; /* Adjust height */
+    width: 24px; /* Adjust width */
+
+    margin-right: 90%; /* Align to the left */
+    margin-top: 16.5px; /* Adjust margin */
+    margin-bottom: 9px; /* Adjust margin */
+    position: relative;
+    bottom: 9.5px;
+    filter: invert();
+  
   }
 
   /* Show navigation items when the menu is open */
   .open ul {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Take full width */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
   }
 
-  /* Optionally, center-align the links when the menu is open */
+  /* Center the links when the menu is open */
   .open li {
-    margin: 0.2rem 0;
-    text-align: center;
-  }
-  .home-icon {
-    display: none;
+    margin: 0.2rem 0; /* Space between items */
+    text-align: center; /* Center-align the entire link item */
   }
 }
 
-
-/*For big screen*/
+/* For big screen */
 @media (min-width: 768px) {
-  .home-icon {
-    display: flex;
-    height: 20px;
-    width: 20px;
-    padding-right: 18px;
-    padding-left: 15px;
-  }
   nav {
-    height: 33.2px;
+    height: 40px;
   }
 }
 
@@ -175,3 +210,4 @@ img {
 .git-image:hover {
   transform: scale(1.1);
 }
+
