@@ -1,11 +1,8 @@
-
-
 .outer-container {
   display: flex;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
   background-color: black; /* Full-screen black background */
-  
 }
 
 .left-section {
@@ -34,7 +31,6 @@
   border-radius: 50%; /* Optional: makes the image circular */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
   transition: box-shadow 0.3s ease-in-out;
-  
 }
 
 .about-us {
@@ -47,9 +43,27 @@
   margin-bottom: 10px;
 }
 
-.highlight {
-  color: orangered;
+
+
+.zoom-text {
+
+  text-shadow: 0 0 27px  #b721ff;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.05em; /* Optional: adds spacing between letters */
 }
+
+.zoom-text span {
+  color: blueviolet;
+  text-shadow: 0 0 27px  #b721ff;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom */
+}
+
+.zoom-text span:hover {
+  transform: scale(1.5); /* Zoom up individual letters */
+}
+
 
 .bio-text {
   color: gray;
@@ -57,34 +71,36 @@
   font-size: 12px;
 }
 
-
-@media (max-width:480px){
-  .profile-image  {
-    width: 145%; /* Adjust size as needed */
-    height: auto;
-    border-radius: 50%; /* Optional: makes the image circular */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
-    transition: box-shadow 0.3s ease-in-out;
-    margin-left: 46px;
-    
+@media (max-width: 480px) {
+  .outer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center the sections */
+    justify-content: center;
   }
+
   .left-section {
-    width: 78%;
-    padding: 20px;
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    
+    width: 100%; /* Full width for mobile */
+    margin-left: 0; /* No left margin */
   }
-  .right-section {
-    width: 115%;
-    padding: 20px;
-    background-color: black; /* Ensure background color is consistent */
-    color: white;
-    display: flex;
-    flex-direction: column; /* Align content vertically */
-    justify-content: center; /* Center content vertically */
-  }
-  
-}
 
+  .right-section {
+    width: 90%; /* Adjust width for mobile */
+    margin-left: 0; /* No left margin */
+  }
+  .about-us {
+    text-align: center;
+  }
+  .title {
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 50%; /* Adjust image size for mobile */
+    margin-bottom: 20px; /* Add space below image */
+  }
+
+  .bio-text {
+    text-align: center;
+    margin-left: 0px;
+  }
+}
