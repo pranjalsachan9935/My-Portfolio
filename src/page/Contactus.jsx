@@ -1,19 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./contact.css";
 import axios from "axios";
+import blueImage from '../assets/movie-image-1.webp';
 
 function Contact() {
   const inputref = useRef(null);
   const [error, setError] = useState("");
-  
+
   const [formdata, setFormdata] = useState(() => {
-    const savedData = sessionStorage.getItem('formData');
-    return savedData ? JSON.parse(savedData) : {
-      fname: '',
-      lname: '',
-      country: '',
-      subject: ''
-    };
+    const savedData = sessionStorage.getItem("formData");
+    return savedData
+      ? JSON.parse(savedData)
+      : {
+          fname: "",
+          phoneno: "",
+          email: "",
+          subject: "",
+        };
   });
 
   // Focus on the first input field when the component mounts
@@ -23,7 +26,7 @@ function Contact() {
 
   // Save form data to sessionStorage whenever formdata changes
   useEffect(() => {
-    sessionStorage.setItem('formData', JSON.stringify(formdata));
+    sessionStorage.setItem("formData", JSON.stringify(formdata));
   }, [formdata]);
 
   const handleSubmit = (e) => {
@@ -34,10 +37,10 @@ function Contact() {
       .then((response) => {
         console.log(response.data);
         setFormdata({
-          fname: '',
-          lname: '',
-          country: '',
-          subject: '',
+          fname: "",
+          phoneno: "",
+          email: "",
+          subject: "",
         });
         setError(""); // Clear any previous errors
       })
@@ -51,48 +54,52 @@ function Contact() {
     const { name, value } = e.target;
     setFormdata((prevFormdata) => ({
       ...prevFormdata,
-      [name]: value
+      [name]: value,
     }));
   };
 
   return (
     <>
-      <div className="outer-container2">
-        <h1 className="contact-heading">Contact Us</h1>
+    <h2 className="contact-us">Contact Us</h2>
+      <div className="contact-outer-container">
         <div className="container">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="fname">First Name</label>
+          <div className="blue-container">
+            <img src={blueImage} alt="" className="blue-image"/>
+          </div>
+          <form onSubmit={handleSubmit} className="new-form" >
+           
+            <label htmlFor="fname">Full Name</label>
             <input
               ref={inputref}
               type="text"
               id="fname"
               name="fname"
               value={formdata.fname}
-              placeholder="Your name..."
+              placeholder="Your full name..."
               onChange={handleChange}
               required
             />
-            <label htmlFor="lname">Last Name</label>
+            <label htmlFor="phoneno">Phone no</label>
             <input
-              type="text"
-              id="lname"
-              name="lname"
-              value={formdata.lname}
-              placeholder="Your name..."
+              type="tel"
+              id="phoneno"
+              name="phoneno"
+              value={formdata.phoneno}
+              placeholder="Your number..."
               onChange={handleChange}
               required
             />
-            <label htmlFor="country">Country</label>
-            <select
-              id="country"
-              name="country"
-              value={formdata.country}
+
+            <label htmlFor="country">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formdata.email}
+              placeholder="Your email..."
               onChange={handleChange}
-            >
-              <option value="India">India</option>
-              <option value="Australia">Australia</option>
-              <option value="Germany">Germany</option>
-            </select>
+              required
+            />
 
             <label htmlFor="subject">Subject</label>
             <textarea
@@ -104,7 +111,8 @@ function Contact() {
               required
             />
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className="button-9" />
+          
           </form>
         </div>
       </div>
