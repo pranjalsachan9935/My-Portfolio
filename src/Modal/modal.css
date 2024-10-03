@@ -10,9 +10,12 @@
   align-items: center;
   z-index: 9999;
 }
+.modal-heading{
+  margin-bottom:22px ;
+}
 
 .modal-content {
-  background: white;
+  
   padding: 20px;
   border-radius: 10px;
   max-width: 250px; /* Default size for small screens */
