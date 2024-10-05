@@ -29,8 +29,10 @@
   width: 200px; /* Adjust size as needed */
   height: auto;
   border-radius: 50%; /* Optional: makes the image circular */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial soft glow */
+ 
   transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid blueviolet;
+  box-shadow: 0 0 15px rgb(153, 0, 255); /* Initial soft glow */
 }
 
 .about-us {
