@@ -35,7 +35,7 @@
 
 /* Zoom effect on hover */
 .modal-content:hover {
-  transform: scale(1.1); /* Scale up to 110% */
+ 
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
 
