@@ -123,6 +123,7 @@ img {
 
   ul {
     display: none; /* Hide the unordered list by default */
+    
   }
 
   .menu-icon {
@@ -147,6 +148,8 @@ img {
     width: 100%; /* Take full width */
     justify-content: center; /* Center the icon */
     align-items: center; /* Center the icon */
+    padding-top: 5px;
+    padding-left: 0;
   }
 
   /* Center the links when the menu is open */
@@ -210,4 +213,3 @@ img {
 .git-image:hover {
   transform: scale(1.1);
 }
-
