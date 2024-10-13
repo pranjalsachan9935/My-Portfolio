@@ -7,7 +7,6 @@
 
 .left-section {
   width: 40%;
-  padding: 20px;
   display: flex;
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
