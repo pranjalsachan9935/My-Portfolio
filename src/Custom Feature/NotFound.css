@@ -1,0 +1,36 @@
+/* Basic styling for the container */
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #000000; /* Light background */
+}
+
+/* Styling for the image */
+.not-found-image {
+  /* Ensures the image doesn't overflow horizontally */
+  width: 400px;
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover;
+  border-radius: 10px; /* Adds subtle rounding to the image corners */
+
+}
+
+/* Responsive styles for tablets */
+@media screen and (max-width: 768px) {
+
+
+  .not-found-image {
+    width: 305px; /* Slightly reduces the width of the image */
+  }
+}
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 480px) {
+
+
+  .not-found-image {
+    width: 270px; /* Makes the image nearly full width on smaller screens */
+  }
+}
