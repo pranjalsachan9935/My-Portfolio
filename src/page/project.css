@@ -23,6 +23,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0px;
+  overflow: hidden;
 }
 
 /* Section Title */
