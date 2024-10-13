@@ -21,7 +21,15 @@ function Contact() {
 
   // Focus on the first input field when the component mounts
   useEffect(() => {
-    inputref.current.focus();
+    const handleFocus = () => {
+      const screenWidth = window.innerWidth;
+
+      // Only focus the input field if the screen width is more than 768px (tablet/desktop)
+      if (screenWidth > 768 && inputref.current) {
+        inputref.current.focus();
+      }
+    };
+    handleFocus();
   }, []);
 
   // Save form data to sessionStorage whenever formdata changes
