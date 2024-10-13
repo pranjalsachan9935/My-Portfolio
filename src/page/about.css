@@ -1,8 +1,8 @@
-.outer-container {
+.about-outer-container {
   display: flex;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  background-color: black; /* Full-screen black background */
+  background-color: black; /* Ensure background color is consistent */
 }
 
 .left-section {
@@ -67,14 +67,14 @@
 }
 
 
-.bio-text {
+.about-bio-text {
   color: gray;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
 }
 
 @media (max-width: 480px) {
-  .outer-container {
+  .about-outer-container {
     flex-direction: column; /* Stack sections vertically */
     align-items: center; /* Center the sections */
     justify-content: center;
@@ -101,7 +101,7 @@
     margin-bottom: 20px; /* Add space below image */
   }
 
-  .bio-text {
+  .about-bio-text {
     text-align: center;
     margin-left: 0px;
   }
