@@ -13,6 +13,7 @@ import homeIcon from './assets/3d-house.png';
 import contactUsPng from './assets/information-channels.png';
 import aboutUsPng from './assets/about.png';
 import projectPng from './assets/rocket.png';
+import NotFound from "./Custom Feature/NotFound";
 import "./App.css";
 
 
@@ -116,6 +117,7 @@ const App = () => {
             <Route path="/Aboutus" element={<About />} />
             <Route path="/Contactus" element={<Contact />} />
             <Route path="/Myproject" element={<Project />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </Router>
@@ -125,4 +127,3 @@ const App = () => {
 };
 
 export default App;
-
