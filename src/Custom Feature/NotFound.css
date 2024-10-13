@@ -23,6 +23,7 @@
 
   .not-found-image {
     width: 305px; /* Slightly reduces the width of the image */
+    margin-bottom: 10px;
   }
 }
 
@@ -32,5 +33,6 @@
 
   .not-found-image {
     width: 270px; /* Makes the image nearly full width on smaller screens */
+    margin-bottom: 40px;
   }
 }
