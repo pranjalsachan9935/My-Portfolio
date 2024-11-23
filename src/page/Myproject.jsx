@@ -144,7 +144,7 @@ const Project = () => {
             The COVID Dashboard is a responsive and minimalistic platform that provides real-time data on COVID-19 cases globally, featuring secure login authentication for personalized access. It offers live statistics on cases, recoveries, and fatalities, along with interactive charts for visually analyzing trends. Users can explore global and country-specific insights. Intuitive design and combines real-time API integration with data visualization to deliver an informative.
             </p>
             <a
-              href="https://ecommerce-multimart-two.vercel.app/"
+              href="https://covid-dashboard-6s46mztw4-pranjalsachan.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
