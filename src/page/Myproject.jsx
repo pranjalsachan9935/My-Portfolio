@@ -26,7 +26,7 @@ const Project = () => {
               movie recommendations.
             </p>
             <a
-              href="https://github.com/pranjalsachan9935/Movie_Recommendation_System"
+              href="https://movies-website-wine-gamma.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -43,7 +43,7 @@ const Project = () => {
                     fill="currentcolor"
                   ></path>
                 </svg>
-                <span>View on Github</span>
+                <span>View live</span>
               </button>
             </a>
           </div>
