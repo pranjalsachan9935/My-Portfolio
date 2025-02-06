@@ -1,133 +1,60 @@
-
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import "./contact.css";
-import axios from "axios";
-import blueImage from '../assets/finalbgs.webp';
-
-function Contact() {
-  const inputref = useRef(null);
-  const [error, setError] = useState("");
-
-  const [formdata, setFormdata] = useState(() => {
-    const savedData = sessionStorage.getItem("formData");
-    return savedData
-      ? JSON.parse(savedData)
-      : {
-          fname: "",
-          phoneno: "",
-          email: "",
-          subject: "",
-        };
-  });
-
-
-  // Focus on the first input field when the component mounts
-  useEffect(() => {
-    const handleFocus = () => {
-      const screenWidth = window.innerWidth;
-
-      // Only focus the input field if the screen width is more than 768px (tablet/desktop)
-      if (screenWidth > 768 && inputref.current) {
-        inputref.current.focus();
-      }
-    };
-    handleFocus();
-  }, []);
-
-  // Save form data to sessionStorage whenever formdata changes
-  useEffect(() => {
-    sessionStorage.setItem("formData", JSON.stringify(formdata));
-  }, [formdata]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    axios
-      .post("https://jsonplaceholder.typicode.com/posts", formdata)
-      .then((response) => {
-        console.log(response.data);
-        setFormdata({
-          fname: "",
-          phoneno: "",
-          email: "",
-          subject: "",
-        });
-        setError(""); // Clear any previous errors
-      })
-      .catch((error) => {
-        setError("An unexpected error occurred");
-        console.log(error);
-      });
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormdata((prevFormdata) => ({
-      ...prevFormdata,
-      [name]: value,
-    }));
-  };
-
+import instagramLogo from "../assets/instagram-fill-svgrepo-com.svg";
+import linkedinLogo from "../assets/linkedin-svgrepo-com.svg";
+import githubLogo from "../assets/github-svgrepo-com.svg";
+import gmailLogo from "../assets/gmail-svgrepo-com.svg";
+const Contactus = () => {
   return (
-    <>
-    <h2 className="contact-us">Contact Us</h2>
-      <div className="contact-outer-container">
-        <div className="container">
-          <div className="blue-container">
-            <img src={blueImage} alt="" className="blue-image"/>
-          </div>
-          <form onSubmit={handleSubmit} className="new-form" >
-           
-            <label htmlFor="fname">Full Name</label>
-            <input
-              ref={inputref}
-              type="text"
-              id="fname"
-              name="fname"
-              value={formdata.fname}
-              placeholder="Your full name..."
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="phoneno">Phone no</label>
-            <input
-              type="tel"
-              id="phoneno"
-              name="phoneno"
-              value={formdata.phoneno}
-              placeholder="Your number..."
-              onChange={handleChange}
-              required
-            />
+    <div className="contact-background">
+      <div className="contact-container">
+        <h2 className="contact-header">Let's Connect</h2>
 
-            <label htmlFor="country">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formdata.email}
-              placeholder="Your email..."
-              onChange={handleChange}
-              required
-            />
+        <div className="contact-list">
 
-            <label htmlFor="subject">Subject</label>
-            <textarea
-              id="subject"
-              name="subject"
-              value={formdata.subject}
-              placeholder="Write something..."
-              onChange={handleChange}
-              required
-            />
-
-            <input type="submit" value="Submit" className="button-9" />
-          
-          </form>
+          <a
+            href="https://www.instagram.com/pranjal_sachan2021/"
+            className="contact-item instagram"
+          >
+            <img src={instagramLogo} alt="WhatsApp" className="contact-icon" />
+            <div className="contact-info">
+              <span className="contact-platform">Instagram</span>
+            </div>
+          </a>
+<hr/>
+          <a
+            href="https://www.instagram.com/pranjal_sachan2021/"
+            className="contact-item whatsapp"
+          >
+            <img src={gmailLogo} alt="WhatsApp" className="contact-icon" />
+            <div className="contact-info">
+              <span className="contact-platform">WhatsApp</span>
+            </div>
+          </a>
+          <hr/>
+          <a
+            href="https://www.linkedin.com/in/pranjal-sachan-a09549251/"
+            className="contact-item linkedin"
+          >
+            <img src={linkedinLogo} alt="LinkedIn" className="contact-icon" />
+            <div className="contact-info">
+              <span className="contact-platform">LinkedIn</span>
+            </div>
+          </a>
+          <hr/>
+          <a
+            href="https://github.com/pranjalsachan9935"
+            className="contact-item github"
+          >
+            <img src={githubLogo} alt="GitHub" className="contact-icon" />
+            <div className="contact-info">
+              <span className="contact-platform">GitHub</span>
+            </div>
+          </a>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
-export default Contact;
+export default Contactus;
