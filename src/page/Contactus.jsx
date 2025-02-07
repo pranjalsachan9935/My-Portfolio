@@ -9,9 +9,7 @@ const Contactus = () => {
     <div className="contact-background">
       <div className="contact-container">
         <h2 className="contact-header">Let's Connect</h2>
-
         <div className="contact-list">
-
           <a
             href="https://www.instagram.com/pranjal_sachan2021/"
             className="contact-item instagram"
@@ -21,17 +19,17 @@ const Contactus = () => {
               <span className="contact-platform">Instagram</span>
             </div>
           </a>
-<hr/>
+          <hr />
           <a
-            href="https://www.instagram.com/pranjal_sachan2021/"
+            href="mailto:pranjalsachan9935@gmail.com"
             className="contact-item whatsapp"
           >
             <img src={gmailLogo} alt="WhatsApp" className="contact-icon" />
             <div className="contact-info">
-              <span className="contact-platform">WhatsApp</span>
+              <span className="contact-platform">Email</span>
             </div>
           </a>
-          <hr/>
+          <hr />
           <a
             href="https://www.linkedin.com/in/pranjal-sachan-a09549251/"
             className="contact-item linkedin"
@@ -41,7 +39,7 @@ const Contactus = () => {
               <span className="contact-platform">LinkedIn</span>
             </div>
           </a>
-          <hr/>
+          <hr />
           <a
             href="https://github.com/pranjalsachan9935"
             className="contact-item github"
