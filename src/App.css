@@ -166,49 +166,8 @@ img {
   }
 }
 
-/* Social Media Icons */
-.social-icons {
-  position: fixed;
-  bottom: 20px; /* Adjust this value to move the icons up or down */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: 10;
-}
 
-.social-icons img {
-  width: 34px;
-  height: 34px;
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Example to change color */
-  transition: transform 0.3s ease;
-}
 
-/* Hover zoom effect for social icons */
-.social-icons img:hover {
-  transform: scale(1.1);
-}
-
-.social-icons-1 {
-  position: fixed;
-  bottom: 27px; /* Adjust this value to move the icons up or down */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: 10;
-}
-
-.social-icons-1 img {
-  width: 20px;
-  height: 19px;
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Example to change color */
-  transition: transform 0.3s ease;
-}
 
 .git-image:hover {
   transform: scale(1.1);
