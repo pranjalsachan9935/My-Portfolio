@@ -1,0 +1,38 @@
+._social-links {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translatey(-50%);
+	padding: 0.5em 0em 0.4em 0.5em;
+	background: #000000;
+	border-radius: 0.5em 0 0 0.5em;
+  border-left: 3px solid blueviolet;
+	transition: all 300ms ease, border-left 300ms ease;
+}
+
+.sticky-logo{
+filter: invert();
+}
+
+._social-links:hover {
+	box-shadow: -8px 0px 20px blueviolet;
+	padding: 0.5em;
+  border-left: 0px;
+}
+
+._links-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.7em;
+}
+._social-link a {
+	font-size: 1.4rem;
+	transition: all 200ms ease;
+}
+._social-link a:visited {
+	color: blueviolet;
+}
+._social-link a:hover {
+	color: blueviolet;
+}
