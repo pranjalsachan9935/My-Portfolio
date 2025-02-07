@@ -5,15 +5,13 @@ import {
   Routes,
   NavLink, Link
 } from "react-router-dom";
-import instagramLogo from "./assets/instagram.png";
-import linkedinLogo from "./assets/linkdin.png";
-import githubLogo from "./assets/github.png";
 import menuIcon from "./assets/menu.png";
 import homeIcon from './assets/3d-house.png';
 import contactUsPng from './assets/information-channels.png';
 import aboutUsPng from './assets/about.png';
 import projectPng from './assets/rocket.png';
 import NotFound from "./Custom Feature/NotFound";
+import StickyContact from "./Custom Feature/StickyContact";
 import "./App.css";
 
 
@@ -83,32 +81,7 @@ const App = () => {
         </nav>
 
         {/* Social Media Icons */}
-        <div className="social-icons">
-          <a
-            href="https://www.instagram.com/pranjal_sachan2021"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={instagramLogo} alt="Instagram Logo" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/pranjal-sachan-a09549251"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={linkedinLogo} alt="LinkedIn Logo" />
-          </a>
-        </div>
-
-        <div className="social-icons-1">
-          <a
-            href="https://github.com/pranjalsachan9935"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={githubLogo} alt="GitHub Logo" className="git-image" />
-          </a>
-        </div>
+       <StickyContact/>
 
         {/* Routes */}
         <Suspense fallback={<div>Loading...</div>}>
