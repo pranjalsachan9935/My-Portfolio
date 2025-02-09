@@ -7,8 +7,8 @@ import './StickyContact.css';
 const StickyContact = () => {
   return (
     <div className="_social-links">
-      <ul className="_links-list">
-        <li className="_social-link">
+      <div className="_links-list">
+        <span className="_social-link">
           <a
             href="https://www.instagram.com/pranjal_sachan2021/"
             target="_blank"
@@ -16,8 +16,8 @@ const StickyContact = () => {
           >
             <img src={instagramLogo} alt="WhatsApp" className="sticky-logo" />
           </a>
-        </li>
-        <li className="_social-link">
+        </span>
+        <span className="_social-link">
           <a
             href="https://github.com/pranjalsachan9935"
             target="_blank"
@@ -25,8 +25,8 @@ const StickyContact = () => {
           >
             <img src={githubLogo} alt="GitHub" className="sticky-logo"/>
           </a>
-        </li>
-        <li className="_social-link">
+        </span>
+        <span className="_social-link">
           <a
             href="https://www.linkedin.com/in/pranjal-sachan-a09549251/"
             target="_blank"
@@ -34,8 +34,8 @@ const StickyContact = () => {
           >
             <img src={linkedinLogo} alt="LinkedIn" className="sticky-logo" />
           </a>
-        </li>
-      </ul>
+        </span>
+      </div>
     </div>
   );
 };
