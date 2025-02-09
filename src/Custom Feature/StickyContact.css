@@ -6,8 +6,9 @@
 	padding: 0.5em 0em 0.4em 0.5em;
 	background: #000000;
 	border-radius: 0.5em 0 0 0.5em;
-  border-left: 3px solid blueviolet;
+        border-left: 3px solid blueviolet;
 	transition: all 300ms ease, border-left 300ms ease;
+	z-index: 99;
 }
 
 .sticky-logo{
