@@ -43,7 +43,7 @@ nav {
   display: none; /* Hide menu icon by default */
 }
 
-nav ul {
+ul {
   list-style: none;
   padding: 0;
   padding-top: 12.5px;
