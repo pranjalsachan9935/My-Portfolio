@@ -152,7 +152,7 @@ const Project = () => {
               deliver an informative.
             </p>
             <a
-              href="https://ecommerce-multimart-two.vercel.app/"
+              href="https://covid-dashboard-five-gamma.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
